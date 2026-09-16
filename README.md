@@ -23,7 +23,7 @@ não precisa instalar nada e a API não exige cadastro nem chave de acesso.
 
 ## 5. Print da tela funcionando
 
-(print.png)
+![resultado da busca pelo CEP 89201-000](print.png)
 
 ## 6. Uma dificuldade que tive
 
