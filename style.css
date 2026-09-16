@@ -1,0 +1,156 @@
+/* ---- Cores e valores reutilizados ---- */
+:root {
+  --fundo: #e8ecef;
+  --superficie: #ffffff;
+  --texto: #18222c;
+  --texto-fraco: #5c6873;
+  --borda: #d3dae0;
+  --destaque: #1958e0;
+  --destaque-escuro: #093594;
+  --alerta: #990505;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 32px 16px;
+  background-color: var(--fundo);
+  color: var(--texto);
+  font-family: "Segoe UI", system-ui, Arial, sans-serif;
+  line-height: 1.5;
+}
+
+.painel {
+  max-width: 560px;
+  margin: 0 auto;
+  background-color: var(--superficie);
+  border: 1px solid var(--borda);
+  border-radius: 10px;
+  padding: 28px;
+}
+
+.cabecalho h1 {
+  margin: 0 0 4px;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.cabecalho p {
+  margin: 0 0 24px;
+  color: var(--texto-fraco);
+}
+
+.busca label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.linha {
+  display: flex;
+  gap: 8px;
+}
+
+input {
+  flex: 1;
+  padding: 11px 12px;
+  font-size: 16px;
+  font-family: inherit;
+  color: var(--texto);
+  border: 1px solid var(--borda);
+  border-radius: 6px;
+  background-color: #fff;
+}
+
+input:focus {
+  outline: 2px solid var(--destaque);
+  outline-offset: 1px;
+  border-color: var(--destaque);
+}
+
+button {
+  padding: 11px 18px;
+  font-size: 15px;
+  font-family: inherit;
+  font-weight: 600;
+  color: #fff;
+  background-color: var(--destaque);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--destaque-escuro);
+}
+
+button:disabled {
+  background-color: var(--texto-fraco);
+  cursor: not-allowed;
+}
+
+.mensagem {
+  margin: 18px 0 0;
+  font-size: 15px;
+  color: var(--texto-fraco);
+}
+
+.mensagem.erro {
+  color: var(--alerta);
+  font-weight: 600;
+}
+
+.resultado {
+  margin-top: 20px;
+  border-top: 1px solid var(--borda);
+  padding-top: 18px;
+}
+
+.resultado h2 {
+  margin: 0 0 14px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.resultado dl {
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.campo dt {
+  font-size: 13px;
+  color: var(--texto-fraco);
+  margin-bottom: 2px;
+}
+
+.campo dd {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  word-break: break-word;
+}
+
+.oculto {
+  display: none;
+}
+
+.rodape {
+  margin-top: 24px;
+  font-size: 13px;
+  color: var(--texto-fraco);
+}
+
+@media (max-width: 480px) {
+  .linha {
+    flex-direction: column;
+  }
+  .resultado dl {
+    grid-template-columns: 1fr;
+  }
+}

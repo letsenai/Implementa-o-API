@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Consulta de CEP</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <main class="painel">
+
+    <header class="cabecalho">
+      <h1>Consulta de CEP</h1>
+      <p>Digite um CEP e veja o endereço correspondente.</p>
+    </header>
+
+    <form class="busca" id="formBusca">
+      <label for="campoCep">CEP</label>
+      <div class="linha">
+        <input type="text" id="campoCep" name="cep" placeholder="89201-000" maxlength="9" autocomplete="off">
+        <button type="submit">Buscar endereço</button>
+      </div>
+    </form>
+
+    <p class="mensagem" id="mensagem">Nenhuma busca feita ainda.</p>
+
+    <section class="resultado oculto" id="resultado">
+      <h2 id="tituloResultado">Endereço encontrado</h2>
+      <dl>
+        <div class="campo">
+          <dt>Logradouro</dt>
+          <dd id="saidaLogradouro">—</dd>
+        </div>
+        <div class="campo">
+          <dt>Bairro</dt>
+          <dd id="saidaBairro">—</dd>
+        </div>
+        <div class="campo">
+          <dt>Cidade</dt>
+          <dd id="saidaCidade">—</dd>
+        </div>
+        <div class="campo">
+          <dt>Estado</dt>
+          <dd id="saidaEstado">—</dd>
+        </div>
+        <div class="campo">
+          <dt>DDD</dt>
+          <dd id="saidaDdd">—</dd>
+        </div>
+        <div class="campo">
+          <dt>CEP</dt>
+          <dd id="saidaCep">—</dd>
+        </div>
+      </dl>
+    </section>
+
+    <footer class="rodape">
+      Dados fornecidos pela API pública ViaCEP.
+    </footer>
+
+  </main>
+
+</body>
+
+</html>
